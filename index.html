@@ -4,58 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b0b0e">
-  <title>MẠNH DUY</title>
+  <title>MANH DUY - MOD SKIN FF</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="brand">Mạnh Duy</div>
-    <nav>
-      <a href="#home">Trang chủ</a>
-      <a href="#request">Mod Theo Yêu Cầu</a>
-      <a href="#youtube">Kênh YT</a>
-      <a href="#group">NHÓM MOD</a>
-    </nav>
-  </header>
+<header class="top">
+  <div class="brand">Manh Duy</div>
+  <nav>
+    <a href="#home">Trang chủ</a>
+    <a href="#request">Mod Theo Yêu Cầu</a>
+    <a href="#youtube">Kênh YT</a>
+    <a href="#group">NHÓM MOD</a>
+  </nav>
+</header>
 
-  <main id="home" class="container">
-    <section class="notice">
-      <div class="shield">🛡️</div>
-      <div>Bản mod của mình được làm theo hướng an toàn,<br>
-      không can thiệp quá sâu vào file như 1 số bản mod khác nên không ban ID đâu nhé ae ❤️</div>
-    </section>
+<main id="home" class="container">
+  <section class="notice">
+    <div class="shield">🛡️</div>
+    <div>Bản mod của mình được làm theo hướng an toàn,<br>
+    không can thiệp quá sâu vào file như 1 số bản mod khác nên không ban ID đâu nhé ae ❤️</div>
+  </section>
 
-    <section class="grid" id="mod-list"></section>
+  <section class="grid" id="mod-list"></section>
 
-    <section id="request" class="bottom-panel">
-      <h2>MOD THEO YÊU CẦU</h2>
-      <p>Gửi yêu cầu skin/mod bạn muốn. Phần này có thể nối với Telegram hoặc form riêng.</p>
-      <button onclick="showToast('Đã ghi nhận yêu cầu mẫu!')">Gửi yêu cầu</button>
-    </section>
+  <section id="request" class="bottom-panel">
+    <h2>MOD THEO YÊU CẦU</h2>
+    <p>Gửi yêu cầu skin/mod bạn muốn. Phần này có thể nối với Telegram/Facebook/Discord.</p>
+    <button class="btn" onclick="showToast('Đã ghi nhận yêu cầu mẫu!')">Gửi yêu cầu</button>
+  </section>
 
-    <section id="youtube" class="bottom-panel">
-      <h2>KÊNH YOUTUBE</h2>
-      <p>Thêm link YouTube của bạn tại đây.</p>
-      <a class="btn" href="#" onclick="showToast('Hãy thay link YouTube trong index.html');return false;">Mở Kênh YT</a>
-    </section>
+  <section id="youtube" class="bottom-panel">
+    <h2>KÊNH YOUTUBE</h2>
+    <p>Thêm link YouTube của bạn tại đây.</p>
+    <a class="btn" href="#" onclick="showToast('Hãy thay link YouTube của bạn!');return false;">Mở kênh</a>
+  </section>
 
-    <section id="group" class="bottom-panel">
-      <h2>NHÓM MOD</h2>
-      <p>Thêm link nhóm Telegram/Facebook/Discord của bạn.</p>
-    </section>
-  </main>
+  <section id="group" class="bottom-panel">
+    <h2>NHÓM MOD</h2>
+    <p>Thêm link nhóm Telegram/Facebook/Discord của bạn.</p>
+  </section>
+</main>
 
-  <div class="modal" id="modal">
-    <div class="modal-box">
-      <button class="close" onclick="closeModal()">×</button>
-      <img id="modal-img" src="" alt="">
-      <h2 id="modal-title"></h2>
-      <p id="modal-meta"></p>
-      <button class="download" onclick="showToast('Bạn có thể gắn link tải mod thật ở đây.')">TẢI MOD</button>
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal()" aria-label="Đóng">×</button>
+    <img id="modal-img" class="detail-img" src="sample-card.svg" alt="">
+    <h1 id="modal-title"></h1>
+    <p id="modal-date" class="date"></p>
+
+    <div class="detail-section">
+      <h3>🎭 Trang bị</h3>
+      <p>✅ Nhân Vật: <span id="modal-character"></span></p>
+    </div>
+
+    <div class="detail-section">
+      <h3>📦 Phiên bản hỗ trợ</h3>
+      <div id="modal-versions"></div>
+    </div>
+
+    <div class="android-box">
+      <h3>📱 Android</h3>
+      <a id="modal-ff-thuong" class="download" href="#" target="_blank" rel="noopener">FF Thường</a>
+      <a id="modal-ff-max" class="download" href="#" target="_blank" rel="noopener">FF Max</a>
+    </div>
+
+    <div class="safe-notice">
+      🛡️ Bản mod của mình được làm theo hướng an toàn,<br>
+      không can thiệp quá sâu vào file như 1 số bản mod khác nên không ban ID đâu nhé ae ❤️
     </div>
   </div>
+</div>
 
-  <div id="toast"></div>
-  <script src="script.js"></script>
+<div id="toast"></div>
+<script src="script.js"></script>
 </body>
 </html>
